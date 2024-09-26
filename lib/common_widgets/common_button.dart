@@ -9,7 +9,7 @@ class CommonButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 330,
       height: 45,
       decoration: BoxDecoration(
         gradient: LinearGradient(
