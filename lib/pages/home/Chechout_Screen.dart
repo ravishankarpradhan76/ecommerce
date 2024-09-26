@@ -10,6 +10,7 @@ class ChechoutScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
     actions: [
+
       IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
     SizedBox(width: 260,),
     IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
