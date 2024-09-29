@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Chechout_Screen.dart';
+
 class CategoryWidget extends StatelessWidget {
   const CategoryWidget({Key? key}) : super(key: key);
 
@@ -28,14 +30,24 @@ class CategoryWidget extends StatelessWidget {
                   width: MediaQuery.of(context).size.width / 3,
                   child: Padding(
                     padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(8.0),
-                          image:const DecorationImage(
-                              image: NetworkImage(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChechoutScreen()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8.0),
+                            image: const DecorationImage(
+                                image: NetworkImage(
                                   "https://i.pinimg.com/474x/62/b0/80/62b080c89379d443b563cb1ed1cc2520.jpg",
-                              ),fit:BoxFit.cover)),
+                                ),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ));
             },

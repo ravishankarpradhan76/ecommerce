@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../common_widgets/common_button.dart';
+import '../home_page.dart';
 
 class ComfirmationPage extends StatelessWidget {
   const ComfirmationPage({Key? key}) : super(key: key);
@@ -9,7 +10,6 @@ class ComfirmationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(
@@ -46,18 +46,48 @@ class ComfirmationPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30,),
-            Text('Confirmatoin',style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400,color: Colors.black87),),
-            SizedBox(height: 3,),
-            Text('You have successfully',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.black54),),
-            Text('complete your payment procedure',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: Colors.black54),),
-            SizedBox(height: 120,),
-            CommonButton(title: 'Back to Home',),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              'Confirmatoin',
+              style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black87),
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Text(
+              'You have successfully',
+              style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black54),
+            ),
+            Text(
+              'complete your payment procedure',
+              style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black54),
+            ),
+            SizedBox(
+              height: 120,
+            ),
+            CommonButton(
+              title: 'Back to Home',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+            ),
           ],
         ),
       ),
-
-
     );
   }
 }

@@ -1,6 +1,9 @@
 import 'package:ecommerce/common_widgets/common_button.dart';
 import 'package:flutter/material.dart';
 
+import 'Log_In.dart';
+import 'Sign_Up_Page.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -47,25 +50,28 @@ class _SplashScreenPage extends State<SplashScreen> {
               width: 300,
               color: Colors.blueGrey,
             ),
-         SizedBox(height:120,),
-         CommonButton(title: 'Log in'),
-            SizedBox(height:30 ,),
-            Text('Signup',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.black54),),
+            SizedBox(height: 120),
+            CommonButton(
+              title: 'Log in',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LogInScreen()),
+                );
+              },
+            ),
+            SizedBox(height: 30),
+            CommonButton(
+              title: 'Signup',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
+              },
+            ),
           ],
         ),
-      ),
-    );
-  }
-}
-class LoginScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login Screen'),
-      ),
-      body: Center(
-        child: Text('Welcome to the Login Screen!'),
       ),
     );
   }

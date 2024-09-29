@@ -1,6 +1,8 @@
 import 'package:ecommerce/pages/home/widgets/all_product_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../Chechout_Screen.dart';
+
 class ProductWidget extends StatelessWidget {
   const ProductWidget({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class ProductWidget extends StatelessWidget {
           onTap: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AllProductWidget()),
+              MaterialPageRoute(builder: (context) => ChechoutScreen()),
             );
           },
           child: Row(

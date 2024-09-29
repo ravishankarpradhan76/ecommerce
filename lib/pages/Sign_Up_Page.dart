@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../common_widgets/common_button.dart';
 import '../common_widgets/common_text_field.dart';
+import 'home/home_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _SignUpPageState extends State<SignUpPage> {
           leading: Icon(Icons.arrow_back),
         ),
         body:Padding(
-            padding: const EdgeInsets.only(left: 24),
+            padding: const EdgeInsets.all(24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -28,10 +29,10 @@ class _SignUpPageState extends State<SignUpPage> {
                 const SizedBox(height: 10),
                 const CommonTextField(label: 'enter Password',isPassword: true,),
                 const SizedBox(height: 45),
-                Padding(
-                  padding: const EdgeInsets.only(left: 7),
-                  child: CommonButton(title: 'Sign Up'),
-                ),
+                CommonButton(title: 'Sign Up', onPressed: () {  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                ); },),
                 const SizedBox(height: 35),
                 Padding(
                   padding: const EdgeInsets.only(left: 54),
@@ -39,7 +40,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     children: [
                       Text('Already have an account ?',style: TextStyle(fontSize: 13,fontWeight: FontWeight.w600,color: Colors.black54),),
                       SizedBox(width: 8,),
-                      Text('Sign in',style: TextStyle(fontSize: 13,fontWeight: FontWeight.w700,color: Colors.black87),),
+                      Text('Log in',style: TextStyle(fontSize: 13,fontWeight: FontWeight.w700,color: Colors.black87),),
                     ],
                   ),
                 ),

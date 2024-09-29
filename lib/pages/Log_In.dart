@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../common_widgets/common_button.dart';
 import '../common_widgets/common_text_field.dart';
+import 'home/home_page.dart';
 class LogInScreen extends StatefulWidget {
   const LogInScreen({Key? key}) : super(key: key);
 
@@ -29,7 +30,10 @@ class _LogInScreenState extends State<LogInScreen> {
             const SizedBox(height: 45),
             Padding(
               padding: const EdgeInsets.only(left: 7),
-              child: CommonButton(title: 'Log in'),
+              child: CommonButton(title: 'Log in', onPressed: () {  Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              ); },),
             ),
             const SizedBox(height: 35),
             Padding(
